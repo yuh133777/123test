@@ -9,7 +9,7 @@ repeat
 until ScreenGui or attempt >= maxAttempts
 
 if not ScreenGui then
-    warn("ERROR: ScreenGui not found after 3 seconds!")
+    warn("ERROR")
     return
 end
 
@@ -17,9 +17,9 @@ end
 local function SafeDestroy(object, description)
     if object then
         object:Destroy()
-        print("✅ Successfully deleted: " .. description)
+        print("Success" .. description)
     else
-        warn("⚠️ Could not find: " .. description)
+        warn("ERROR" .. description)
     end
 end
 
@@ -60,4 +60,4 @@ local frame453 = frame452 and frame452:FindFirstChild("Frame453")
 local frame455 = frame453 and frame453:FindFirstChild("Frame455")
 SafeDestroy(frame455 and frame455:FindFirstChild("Frame463"), "Frame463 in nested structure")
 
-print("\n✨ All modifications attempted. Check output for results.")
+print("Success")
