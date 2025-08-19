@@ -9,7 +9,7 @@ repeat
 until ScreenGui or attempt >= maxAttempts
 
 if not ScreenGui then
-    warn("ERROR: ScreenGui not found after 3 seconds!")
+    warn("ERROR:")
     return
 end
 
@@ -29,7 +29,7 @@ end
 
 -- Execute renaming
 RenameFrames(ScreenGui)
-print(`\nSUCCESS! Renamed {frameCount} frames.`)
+print("Success:")
 
 -- Optional: Highlight renamed frames (for visual confirmation)
 for i = 1, frameCount do
